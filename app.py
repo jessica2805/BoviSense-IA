@@ -23,8 +23,8 @@ if os.path.exists(RUTA_JSON):
 else:
     print(f"⚠️ Alerta: No se encontró el archivo '{RUTA_JSON}'. Corre primero el script generador.")
 
-GROQ_API_KEY = "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"
-
+```python
+GROQ_API_KEY = os.environ.get("MI_CLAVE_GROQ")
 app = Flask(__name__)
 cliente = Groq(api_key=GROQ_API_KEY)
 
